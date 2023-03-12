@@ -1,0 +1,22 @@
+.cartWidgetButton {       
+    background-color: rgba(245, 28, 28, 0);
+    border: solid 1px white;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 30px;
+    
+    
+    
+}
+
+.cartWidgetButton:hover {
+    scale: 1.2;
+    transition: all .8s;
+    cursor: pointer;
+    
+}
+
+.cartWidgetIcon {
+    width: 60px;
+
+}
