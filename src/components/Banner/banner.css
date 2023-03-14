@@ -1,0 +1,36 @@
+.bannerContainer {
+    background-image: url(/public/fondodescuento.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    padding: 50px;
+    margin: 50px;
+    justify-content: center;
+}
+
+.bannerTitle {
+    font-size: 5rem;
+    text-align: center;
+    color: white;      
+}
+
+.bannerTitle:hover {
+    scale: 3.5;
+    transition: all 2s;
+    cursor: pointer;
+    rotate: 360deg;
+        
+}
+
+.bannerText {
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(255, 255, 255);        
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5px 50px 5px;
+
+}
+

@@ -1,16 +1,16 @@
 .itemCard{
     display: flex;
-    flex-direction: column;
-    background: rgb(254,0,218);
-    background: linear-gradient(180deg, rgba(254,0,218,0.24693627450980393) 0%, rgba(255,196,0,0.35057773109243695) 52%, rgba(0,212,255,0.13769257703081228) 100%);
+    flex-direction: column;  
+    background-image: url(/public/fondoCard.jpg);  
+    background-size: cover;    
     border-radius: 15px;
-    border: 2px solid pink;
-    color: rgb(30, 30, 30);
-    padding: 15px;
+    border: 2px solid pink;    
+    padding: 25px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 250px;
     height: 550px;
     margin: 30px; 
+    justify-content: space-around;
     
     
     
@@ -23,13 +23,14 @@
 }
 
 .itemTitle {
-    font-family: Brush Script MT;
-    font-size: 2.3rem;   
-    text-align: center;  
-    border-top: 1px solid rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;   
+    text-align: center;      
     background-color: white;
     border-radius: 10px;
-    
+    border: 2px solid pink;
+    margin: 10px;
+    padding: 2px;
     
     
     
@@ -37,17 +38,24 @@
 
 .itemDescrip {
     font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(0, 0, 0, 0.251);
+    color: white;
+    border-radius: 15px;
+    padding: 5px;
     
 }
 
 .itemPrice{
-    background-color: white;
+    color: white;
+    background-color: pink;
     width: fit-content;
     border-radius: 10px;
     padding: 10px;
     font-size: 2rem;  
-    text-align: left;  
-    font-family: Brush Script MT;          
+    margin: 0 auto;  
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 2px solid white;          
 }
 
 .itemImagen{
@@ -65,7 +73,7 @@
     width: 80%;    
     background-color: rgb(247, 253, 253);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0 auto;
     color: pink;
 }

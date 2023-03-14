@@ -1,6 +1,7 @@
 .saludoContainer {
-    display: flex;
+    display:flex;
     justify-content: center;
+    align-items: center;    
     background-image: url(/public/banner.png); 
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,12 +13,15 @@
 }
 
 .saludoContainer h1{
-    background-color: rgba(0, 0, 0, 0.344);
+    font-size: 3.5rem;
+    background-color: rgba(0, 0, 0, 0.335);
     border-radius: 25px;
     padding: 25px;
     height: fit-content;
     color: rgb(255, 255, 255);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    
 
 }
 
