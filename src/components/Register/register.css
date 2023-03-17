@@ -1,0 +1,64 @@
+.registerButton {
+    color: white;
+    background-color: pink;
+    border:none;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px; 
+    padding: 5px;
+    margin-left: 3px;
+    
+}
+
+.registerForm {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.912);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.registerForm form {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 auto;  
+}
+
+.registerForm input{
+    background-color:  rgba(0, 0, 0, 0.799);
+    margin: 15px;
+    width: 30%;
+    height: 40px;
+    outline: none;color: pink;
+    border: 2px solid pink;  
+}
+
+.registerForm input:hover {
+    filter: drop-shadow(0 0 15px #db3eb1) drop-shadow(0 0 50px #db3eb1) contrast(.5) brightness(1);
+    transition: .5s;
+}
+
+.registerForm input:focus {
+    background-color: pink;
+    color: black;
+}
+
+.registerCheckBox {
+  color: white;   
+  display: flex;  
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  
+}
+.registerCheckBox input{
+    width: 25px;
+}

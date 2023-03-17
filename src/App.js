@@ -7,7 +7,7 @@ import Saludo from './components/Saludo/Saludo';
 import Flex from './components/Flex/Flex';
 import Carrousel from './components/Carrousel/Carrousel';
 import Banner from './components/Banner/Banner';
-import { useState } from "react";
+import React, { useState, useEffect } from 'react';
 
 
 
@@ -94,6 +94,28 @@ const itemArray = [
   },]
 
 function App() {
+
+  const [items, setItems] = useState([]);
+
+  
+  useEffect(() => {
+    async function fetchData() {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(itemArray);
+        }, 1000);
+      });
+    }
+  
+    async function getData() {
+      const response = await fetchData();
+      setItems(response);
+    }
+  
+    getData();
+  }, []);
+  
+
   return (    
     <header >      
         <Navbar>
@@ -110,19 +132,19 @@ function App() {
 
         
         <Flex>
-          {itemArray.map((item) => (
+          {items.map((item) => (
             <Item key={item.key} item={item} /> 
           ))}
           </Flex>
-        
         
                
         
         
            
-      
+  
   </header>
   );
 }
+
 
 export default App;

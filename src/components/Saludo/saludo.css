@@ -10,6 +10,7 @@
     font-size: 2rem;       
     border-bottom: 1px solid pink; 
     
+    
 }
 
 .saludoContainer h1{
@@ -19,7 +20,8 @@
     padding: 25px;
     height: fit-content;
     color: rgb(255, 255, 255);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
     
     
 

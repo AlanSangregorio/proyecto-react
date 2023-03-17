@@ -61,9 +61,10 @@
 
 .itemImagen{
     width: 100%;
-    height: 250px;
+    height: 240px;
     border: 1px solid pink;
     border-radius: 15px;
+    object-fit: cover;
     
 }
 

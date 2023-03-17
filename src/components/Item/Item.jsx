@@ -1,9 +1,10 @@
 import ItemCounter from "../ItemCounter/ItemCounter";
 import "./Item.css";
 
+
 function Item({ item }) {   
     return (
-      <div className="itemCard">
+      <div data-aos="fade-up" className="itemCard ">
         <div>
           <img className="itemImagen" src={item.img} alt="imagen" />
           <h1 className="itemTitle">{item.title}</h1>
