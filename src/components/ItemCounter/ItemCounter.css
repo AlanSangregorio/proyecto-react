@@ -1,0 +1,18 @@
+.itemCounter {
+    padding: 10px;
+    margin: 0 auto;    
+    font-size: 1.5rem;
+}
+
+.itemCounter button {
+    background-color: pink;
+    width: 35px;
+    padding: 5px;
+    margin: 10px;
+    border: 2px solid white;
+}
+
+.itemCounter button:hover {
+    scale: 1.1;
+    transition: all .3s
+}
