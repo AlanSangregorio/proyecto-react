@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./ItemCounter.css";
 
 function ItemCounter(props) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   const handleIncrement = () => {
     if (count < 100) {
@@ -11,7 +11,7 @@ function ItemCounter(props) {
   };
 
   const handleDecrement = () => {
-    if (count > 0) {
+    if (count > 1) {
       setCount(count - 1);
     }
   };

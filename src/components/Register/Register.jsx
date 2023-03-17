@@ -37,7 +37,7 @@ function Register() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // check if passwords match
+    
     if (password !== confirmPassword) {
         Swal.fire({
             icon: 'error',
@@ -47,22 +47,22 @@ function Register() {
           })
       return;
     }
-    // create new user object
+    
     const newUser = {
       name,
       email,
       password,
       receiveNotifications
     };
-    // add new user to users array
+    
     setUsers([...users, newUser]);
-    // clear form inputs
+    
     setName("");
     setEmail("");
     setPassword("");
     setConfirmPassword("");
     setReceiveNotifications(false);
-    // show success message
+    
      
 Swal.fire({
     position: 'top-end',

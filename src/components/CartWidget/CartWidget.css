@@ -25,12 +25,13 @@
 
 }
 
-.cartWidgetNoti {
+.cartWidgetNoti {    
     background-color: red;
-    font-size: 12px;    
+    font-size: 10px;    
     color: white;
     border-radius: 50%;
-    padding: 3px;
+    padding: 5px;
     align-self: flex-end;
+    text-align: center;
     height: 20px;                
 }

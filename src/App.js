@@ -8,6 +8,7 @@ import Flex from './components/Flex/Flex';
 import Carrousel from './components/Carrousel/Carrousel';
 import Banner from './components/Banner/Banner';
 import React, { useState, useEffect } from 'react';
+import Ubicacion from './components/Ubicacion/Ubicacion';
 
 
 
@@ -136,6 +137,9 @@ function App() {
             <Item key={item.key} item={item} /> 
           ))}
           </Flex>
+          
+          <Ubicacion/>
+          
         
                
         

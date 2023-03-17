@@ -2,7 +2,9 @@ import ItemCounter from "../ItemCounter/ItemCounter";
 import "./Item.css";
 
 
-function Item({ item }) {   
+
+function Item({ item }) {
+ 
     return (
       <div data-aos="fade-up" className="itemCard ">
         <div>

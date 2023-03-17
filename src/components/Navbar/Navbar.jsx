@@ -3,6 +3,7 @@ import "./navbar.css";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 
+
 function Navbar (props) {
     return (
         <div className="navbarContainer">
@@ -19,7 +20,7 @@ function Navbar (props) {
             <Login/>
             <Register/>
             </div>
-            <CartWidget/>
+            <CartWidget />
         </div>
     )
 }

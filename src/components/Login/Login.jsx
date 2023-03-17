@@ -20,7 +20,7 @@ function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Aquí es donde manejarías la lógica de autenticación
+    
   };
 
   return (

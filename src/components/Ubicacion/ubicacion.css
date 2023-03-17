@@ -1,0 +1,31 @@
+.ubicacionContainer {
+    display: flex;
+    flex-direction: row ;
+    margin: 7%;
+    justify-content: center;
+    border-radius: 25px;
+    box-shadow: 0 0 50px #ccc;
+    
+
+}
+
+.ubicacionText {
+    margin: 7%;    
+    align-self: center;
+    text-decoration: underline 5px solid pink;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;               
+}
+
+.ubicacionText h2{
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+.ubicacionMap {
+    margin: 7%;
+    justify-content: center;
+    border: 10px solid pink;
+    padding: 5px;
+
+}
