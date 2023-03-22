@@ -1,6 +1,7 @@
 import "./register.css";
 import  { useState } from "react";
 import Swal from 'sweetalert2'
+import { Link } from "react-router-dom";
 
 function Register() {
   const [showInputs, setShowInputs] = useState(false);
@@ -76,9 +77,9 @@ Swal.fire({
   return (
     <form onSubmit={handleSubmit}>
       {!showInputs && (
-        <button className="registerButton" type="button" onClick={handleRegisterClick}>
+        <Link to="/register" className="registerButton" type="button" onClick={handleRegisterClick}>
           Registrarse
-        </button>
+        </Link>
       )}
       {showInputs && (
         <div className="registerForm">

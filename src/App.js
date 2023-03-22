@@ -9,6 +9,9 @@ import Carrousel from './components/Carrousel/Carrousel';
 import Banner from './components/Banner/Banner';
 import React, { useState, useEffect } from 'react';
 import Ubicacion from './components/Ubicacion/Ubicacion';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './components/Login/Login';
+
 
 
 
@@ -118,11 +121,18 @@ function App() {
   
 
   return (    
-    <header >      
-        <Navbar>
+    <header > 
+      <BrowserRouter>             
+        <Navbar>          
           <CartWidget/>
         </Navbar>
+        <Routes>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/detalle/:id"></Route>
+          <Route path="/category/:category"></Route>
 
+        </Routes>
+        
         <Saludo gretting="¡Todo para tu mejor amigo!">
         </Saludo>  
 
@@ -140,10 +150,12 @@ function App() {
           
           <Ubicacion/>
           
+       
+          
         
                
         
-        
+          </BrowserRouter>
            
   
   </header>

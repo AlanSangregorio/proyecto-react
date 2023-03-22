@@ -5,8 +5,13 @@
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px; 
     padding: 5px;
-    margin-left: 3px;
-    
+    margin-left: 3px;    
+    text-decoration: none;
+}
+
+.registerButton:hover {
+    color: white;
+  background-color: #db3eb1;
 }
 
 .registerForm {

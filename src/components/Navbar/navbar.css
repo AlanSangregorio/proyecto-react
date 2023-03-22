@@ -11,6 +11,7 @@
 }
 
 .navbarButton {
+    font-style: none;
     border: none;
     font-size: 2rem;
     padding: 15px;
@@ -19,8 +20,7 @@
     background-color: rgba(146, 146, 146, 0);
     color: rgb(192, 156, 156);   
     display: inline;
-    
-    
+    text-decoration: none;      
 }
 
 .navbarButton:hover {

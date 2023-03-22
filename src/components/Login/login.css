@@ -5,7 +5,15 @@
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px; 
     padding: 5px;   
+    color: white;
+    text-decoration: none;  
 }
+
+.loginButton:hover {
+  color: white;
+  background-color: #db3eb1;
+}
+
 
 .loginForm {
     display: flex; 

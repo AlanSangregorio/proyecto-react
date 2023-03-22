@@ -1,5 +1,6 @@
 import "./login.css";
 import  { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [showInputs, setShowInputs] = useState(false);
@@ -26,9 +27,9 @@ function Login() {
   return (
     <form onSubmit={handleSubmit}>
       {!showInputs && (
-        <button className="loginButton" type="button" onClick={handleLoginClick}>
+        <Link to="/login" className="loginButton" type="button" onClick={handleLoginClick}>
           Login
-        </button>
+        </Link>
       )}
       {showInputs && (
         <div className="loginForm">                     
