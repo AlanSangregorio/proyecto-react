@@ -1,27 +1,39 @@
-import "./itemListContainer.css"
-import { useState, useEffect } from 'react';
+import "./itemListContainer.css";
+import { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import Item from "../Item/Item";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import { useParams } from 'react-router-dom';
+
 
 function ItemListContainer({ fetchData }) {
   const [items, setItems] = useState([]);
   const [showItemDetail, setShowItemDetail] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
-  const { category } = useParams();
+  const { category, key } = useParams();
 
   useEffect(() => {
-    async function getData() {
+    async function fetchDataByCategory() {
       const response = await fetchData();
-      if (category) {
-        setItems(response.filter((item) => item.category === category));
+      const filteredItems = category ? response.filter(item => item.category === category) : response;
+      setItems(filteredItems);
+    }
+
+    fetchDataByCategory();
+  }, [category, fetchData]);
+
+  useEffect(() => {
+    function handleSelectedItem() {
+      if (key) {
+        const item = items.find(item => item.key === key);
+        setSelectedItem(item);
+        setShowItemDetail(true);
       } else {
-        setItems(response);
+        setShowItemDetail(false);
       }
     }
 
-    getData();
-  }, [category, fetchData]);
+    handleSelectedItem();
+  }, [key, items]);
 
   function handleItemClick(item) {
     setSelectedItem(item);
@@ -30,13 +42,15 @@ function ItemListContainer({ fetchData }) {
 
   return (
     <div className="itemListContainer">
-      {items.map((item) => (
+      {items.map(item => (
         <Item key={item.key} item={item} onItemClick={() => handleItemClick(item)} />
       ))}
-      {showItemDetail && <ItemDetail item={selectedItem} onClose={() => setShowItemDetail(false)} />}
+      {showItemDetail && selectedItem && (
+        <Link to={`/item/${selectedItem.key}`} element={<ItemDetail item={selectedItem} fetchData={fetchData} />} />
+
+      )}
     </div>
   );
 }
 
 export default ItemListContainer;
-

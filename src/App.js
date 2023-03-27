@@ -12,6 +12,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetail from './components/ItemDetail/ItemDetail';
 import itemArray from './items';
 
+
 function App() {
 
   async function fetchData() {
@@ -40,7 +41,8 @@ function App() {
           <Route path='/' element={<ItemListContainer fetchData={fetchData} />} />
           <Route path="/login" element={<Login/>}/>          
           <Route path="/category/:category" element={<ItemListContainer fetchData={fetchData} />} />
-          <Route path="/item/:id" element={<ItemDetail />} />
+          <Route path="/item/:key" element={<ItemDetail items={itemArray} />} />
+
         </Routes>
         
         <Ubicacion/>  
