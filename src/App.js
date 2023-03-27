@@ -38,10 +38,9 @@ function App() {
 
         <Routes>
           <Route path='/' element={<ItemListContainer fetchData={fetchData} />} />
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/detalle/:id"></Route>
+          <Route path="/login" element={<Login/>}/>          
           <Route path="/category/:category" element={<ItemListContainer fetchData={fetchData} />} />
-          <Route path="/item/:id" element={<ItemDetail/>} />
+          <Route path="/item/:id" element={<ItemDetail />} />
         </Routes>
         
         <Ubicacion/>  

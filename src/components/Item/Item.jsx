@@ -1,8 +1,10 @@
 import ItemCounter from "../ItemCounter/ItemCounter";
 import "./Item.css";
 
+
 function Item({ item, onItemClick }) {
   return (
+    
     <div className="itemCard" onClick={onItemClick}>
       <div>
         <img className="itemImagen" src={item.img} alt="imagen" />

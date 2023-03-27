@@ -1,14 +1,15 @@
 import "./itemDetail.css";
 import ItemCounter from "../ItemCounter/ItemCounter";
+import { Link } from "react-router-dom";
 
 function ItemDetail({ item, onClose }) { 
   return (
     <div className="itemDetailOverlay">
       <div className="itemDetailCard"> 
         <div className="itemDetailCloseButtonContainer">
-          <button className="itemDetailCloseButton" onClick={onClose}>
+          <Link to="/" className="itemDetailCloseButton" onClick={onClose}>
             X
-          </button>
+          </Link>
         </div>
         <div>
           <img className="itemDetailImagen" src={item.img} alt="imagen" /> 
