@@ -7,7 +7,7 @@ function Item({ item }) {
     
     <div className="itemCard">
       <div>
-        <img className="itemImagen" src={item.img} alt="imagen" />
+        <img className="itemImagen" src={`/${item.img}`} alt="imagen" />
         <h1 className="itemTitle">{item.title}</h1>
       </div>
       <h2 className="itemPrice">{item.price}</h2>

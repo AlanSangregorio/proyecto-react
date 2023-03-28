@@ -41,7 +41,7 @@ function App() {
           <Route path='/' element={<ItemListContainer fetchData={fetchData} />} />
           <Route path="/login" element={<Login/>}/>          
           <Route path="/category/:category" element={<ItemListContainer fetchData={fetchData} />} />
-          <Route path="/item/:key" element={<ItemDetail items={itemArray} />} />
+          <Route path="/item/:key" element={<ItemDetail fetchData={fetchData} />} />
 
         </Routes>
         
