@@ -19,7 +19,7 @@ function ItemDetail(props) {
           
           setItem(itemRequested); 
           resolve(itemRequested);
-        }, 1000);
+        }, );
       });
       return promesa;
     }
