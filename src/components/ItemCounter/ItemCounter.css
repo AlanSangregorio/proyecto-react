@@ -10,9 +10,34 @@
     padding: 5px;
     margin: 10px;
     border: 2px solid white;
+    border-radius: 8px;
 }
 
 .itemCounter button:hover {
     scale: 1.1;
     transition: all .3s
 }
+
+.itemButtonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .itemDetailButton {
+    width: 30%;    
+    background-color: pink;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 10px 20px;
+  }
+  
+  .itemDetailButton:hover {
+    background-color: #ffca28;
+  }

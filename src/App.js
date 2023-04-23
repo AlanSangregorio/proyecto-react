@@ -11,6 +11,7 @@ import Login from './components/Login/Login';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetail from './components/ItemDetail/ItemDetail';
 import itemArray from './items';
+import { CartProvider } from './context/CartContext';
 
 
 function App() {
@@ -23,9 +24,11 @@ function App() {
     });
   }
 
-  return (    
+  return (  
+   
     <header > 
       <BrowserRouter>  
+      <CartProvider>  
 
         <Navbar>          
           <CartWidget/>
@@ -41,14 +44,13 @@ function App() {
           <Route path='/' element={<ItemListContainer fetchData={fetchData} />} />
           <Route path="/login" element={<Login/>}/>          
           <Route path="/category/:category" element={<ItemListContainer fetchData={fetchData} />} />
-          <Route path="/item/:key" element={<ItemDetail fetchData={fetchData} />} />
-
+          <Route path="/item/:key" element={<ItemDetail fetchData={fetchData} />} />          
         </Routes>
         
         <Ubicacion/>  
 
                                                        
-
+        </CartProvider>
       </BrowserRouter>   
     </header>
   );

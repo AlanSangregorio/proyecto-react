@@ -1,5 +1,5 @@
 import "./login.css";
-import  { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Login() {
@@ -21,35 +21,42 @@ function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    
   };
 
   return (
     <form onSubmit={handleSubmit}>
       {!showInputs && (
-        <Link to="/login" className="loginButton" type="button" onClick={handleLoginClick}>
+        <Link
+          to="/login"
+          className="loginButton"
+          type="button"
+          onClick={handleLoginClick}
+        >
           Login
         </Link>
       )}
       {showInputs && (
-        <div className="loginForm">                     
-            <input placeholder="Email"
-              type="email"
-              value={username}
-              onChange={handleUsernameChange}
-              required
-              />           
-                 
-          
-             <input placeholder="Contraseña"
-              type="password"
-              value={password}
-              onChange={handlePasswordChange}
-              required
-            />
-          
+        <div className="loginForm">
+          <input
+            placeholder="Email"
+            type="email"
+            value={username}
+            onChange={handleUsernameChange}
+            required
+          />
+
+          <input
+            placeholder="Contraseña"
+            type="password"
+            value={password}
+            onChange={handlePasswordChange}
+            required
+          />
+
           <br />
-          <button className="buttonForm" type="submit">Iniciar sesión</button>
+          <button className="buttonForm" type="submit">
+            Iniciar sesión
+          </button>
         </div>
       )}
     </form>

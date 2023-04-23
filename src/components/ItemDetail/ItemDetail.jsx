@@ -5,6 +5,10 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import itemArray from "../../items";
 
+
+
+
+
 function ItemDetail(props) {
   const [item, setItem] = useState({});
   const { key } = useParams();
@@ -42,11 +46,9 @@ function ItemDetail(props) {
         </div>
         <h1 className="itemDetailTitle">{item.title}</h1> 
         <h2 className="itemDetailPrice">{item.price}</h2> 
-        <h3 className="itemDetailDescrip">{item.descrip}</h3> 
-        <div className="itemButtonContainer">         
-          <ItemCounter/> 
-          <button className="itemDetailButton">Agregar al carrito</button> 
-        </div>
+        <h3 className="itemDetailDescrip">{item.descrip}</h3>                 
+        <ItemCounter item={item} />            
+        
       </div>
     </div>
   );
