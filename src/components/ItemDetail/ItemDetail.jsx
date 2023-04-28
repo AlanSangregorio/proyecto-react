@@ -12,6 +12,7 @@ import itemArray from "../../items";
 function ItemDetail(props) {
   const [item, setItem] = useState({});
   const { key } = useParams();
+  
 
   useEffect(() => {
     function fetchData(idURL) {      

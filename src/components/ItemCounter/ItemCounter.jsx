@@ -10,6 +10,8 @@ function ItemCounter({item}) {
   const [count, setCount] = useState(1);
   const { addItem } = useContext(CartContext); 
   
+
+  
   
   const handleIncrement = () => {
     if (count < 100) {
@@ -25,9 +27,7 @@ function ItemCounter({item}) {
   
   const handleAddItem = () => {
     addItem(item, count); // Actualiza la llamada a la función addItem del contexto del carrito
-    setCount(1); // para reiniciar el contador después de agregar el item al carrito
-    console.log(count);
-    
+    setCount(1); // para reiniciar el contador después de agregar el item al carrito         
   };
   
   return (

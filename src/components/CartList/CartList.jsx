@@ -38,8 +38,10 @@ function CartList(items) {
             <li key={item.key}>
               <div>{item.title}</div>
               <div>{item.price}</div>
-              <div>{item.count}</div>
+              <div>{item.count}</div>   
+                        
             </li>
+            
           </div>
         ))}
         <div className="cartFooter">

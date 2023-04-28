@@ -3,13 +3,15 @@
     top: 0;
     position: absolute;
     background-color: pink;
-    height: 100%;
+    height: fit-content;
     width: 30%;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     list-style: none;  
-    z-index: 1;  
+    z-index: 1; 
+    border-radius: 15px;
+    
 }
 
 .cartTitles {
@@ -49,7 +51,8 @@
     margin-top: 15%;
     background-color: white;
     border-radius: 8px;
-    padding: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
 }
 
 .cartClose {
