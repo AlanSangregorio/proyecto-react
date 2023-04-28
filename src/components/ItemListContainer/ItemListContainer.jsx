@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Item from "../Item/Item";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { DotWave } from '@uiball/loaders'
+
 
 
 function ItemListContainer({ fetchData }) {
@@ -10,12 +12,14 @@ function ItemListContainer({ fetchData }) {
   const [showItemDetail, setShowItemDetail] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const { category, key } = useParams();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchDataByCategory() {
       const response = await fetchData();
       const filteredItems = category ? response.filter(item => item.category === category) : response;
       setItems(filteredItems);
+      setIsLoading(false);
     }
 
     fetchDataByCategory();
@@ -42,12 +46,19 @@ function ItemListContainer({ fetchData }) {
 
   return (
     <div className="itemListContainer">
-      {items.map(item => (
-        <Item key={item.key} item={item} onItemClick={() => handleItemClick(item)} />
-      ))}
+      {isLoading ? ( // Renderizado condicional
+        <DotWave 
+        size={57}
+        speed={1} 
+        color="pink" 
+       />
+      ) : (
+        items.map(item => (
+          <Item key={item.key} item={item} onItemClick={() => handleItemClick(item)} />
+        ))
+      )}
       {showItemDetail && selectedItem && (
         <Link to={`/item/${selectedItem.key}`} element={<ItemDetail item={selectedItem} fetchData={fetchData} />} />
-
       )}
     </div>
   );

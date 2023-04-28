@@ -10,7 +10,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './components/Login/Login';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetail from './components/ItemDetail/ItemDetail';
-import itemArray from './items';
 import { CartProvider } from './context/CartContext';
 
 
