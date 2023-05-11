@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Bienvenido a mi primer proyecto en react js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hola como va? Este es mi proyecto de un e-commerce basado en un pet shop. Use este mismo porque al ser de mi pareja el negocio me puede servir a futuro y a la vez usarlo de aprendizaje. Es un proyecto bastante básico el cual tiene capacidad de recopilar la información de una base de datos de FireStore y renderizarla en mi app. Pueden filtrarse los productos por categorías, abrir en detalle cada producto, agregar al carrito cierta cantidad y en el carrito reflejar lo que fue agregado, tiene las funciones de "Login" y "Register" que aun no están funcionales.
+A esto le agregue un simple elemento que es un mapa de google maps.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+# Información
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Los productos están sacados de firestore, se usaron ciertas props para pasar info y también se uso context para acceder desde cualquier lado a la información deseada. Se aplico algunos hooks como "UseState y UseEffect" para determinadas ocasiones en las que fue necesario,  cada componente tiene su propio archivo de Css para su personalización. También se uso Routes para las url. Algunas cosas de Css están con Bootstrap. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# Componentes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ A continuación voy a explicar que es lo que hace cada componente:
+ 
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ - Banner: Renderiza de forma harcodeada una promoción.
+ - Carrousel: Es el elemento que contiene la publicidad y es renderizado por el banner.
+ - CartList: Es el encargado de renderizar la lista de productos agregados al carrito, tiene la capacidad de hacer la suma total de dinero.
+ - CartWidget: Es el icono que aparece en el header para luego desplegar el CartList.
+ - Item: Es el que se ocupa de renderizar cada item y sus propiedades dentro del ItemListContainer.
+ - ItemCounter: Como su nombre indica es el elemento que renderiza el contador de productos, suma resta y agrega al carrito.
+ - ItemDetail: Se renderiza al hacer click sobre el Item y lo que hace es mostrar el producto individualmente y a la vez tambien renderiza el ItemCounter para poder agregar al carrito.
+ - ItemDetailContainer: Es el contenedor de ItemDetail el cual tiene la función para renderizar el producto correcto.
+ - ItemListContainer: Es el encargado de recopilar la info de firestore y renderizar los productos correctos según si se filtro por categoría o bien si queremos ver todos.
+ - Login: Muestra un form para ingresar como usuario a la pagina.
+ - NavBar: Es el que renderiza el logo, los productos, el Login y Register y también el CartWidget.
+ - Ubicación: Es el mapa que aparece en el fondo de la pagina.
+ 
+ 
