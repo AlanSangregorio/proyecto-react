@@ -11,8 +11,6 @@ import Login from './components/Login/Login';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetail from './components/ItemDetail/ItemDetail';
 import { CartProvider } from './context/CartContext';
-
-
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs } from "firebase/firestore"
 
