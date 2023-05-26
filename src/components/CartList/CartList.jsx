@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import "./cartList.css";
 import { Link } from "react-router-dom";
+import Checkout from "../Checkout/Checkout";
 
 function CartList(items) {
   const cart = useContext(CartContext);
@@ -48,6 +49,7 @@ function CartList(items) {
           <div>TOTAL:</div>
           <div>${total}</div>
         </div>
+        <Checkout items={cart.items} />
       </ul>
     </>
   );
